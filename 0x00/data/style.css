@@ -1,0 +1,102 @@
+#background{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+  width: 100vw;
+  height: 100vh;
+}
+
+#backCover{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#contentContainer{
+  width: 50vw;
+  transform: translateX(-50%);
+  margin-left: 50vw;
+  background-color: rgba(200, 200, 200, 0.6);
+}
+
+#footer{
+  text-align: center;
+  background-color: rgba(200, 200, 200, 0.6);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2vh;
+}
+
+#headLine{
+  font-size: 3em;
+  text-decoration: underline;
+  font-family: 'permanent marker';
+  position: sticky;
+  top: 0;
+  background: inherit;
+  text-align: center;
+}
+
+.article{
+  font-family: 'Oswald';
+  background-color: rgba(150, 150, 150, 0.6);
+  margin-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  text-align: justify;
+}
+
+.comment{
+  background-color: rgba(200,200,200, 0.4);
+  border-bottom: 2px solid black;
+}
+
+.commentHeader{
+  text-decoration: underline;
+  font-size: 1.4em;
+}
+
+.commentName{
+  padding-left: 0.5em;
+}
+
+.commentText{
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+a{
+  color: #b17302;
+}
+
+code{
+  display: block;
+  border: 1px solid black;
+  padding-left: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  background-color: rgba(222, 222, 222, 0.5);
+}
+
+.try{
+  display: block;
+}
+
+input[type=text], textarea{
+  width: 100%;
+}
+
+textarea{
+  height: 4em;
+}
