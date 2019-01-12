@@ -1,0 +1,2 @@
+ErrorDocument 404 /HackingChallenge/error403.html
+ErrorDocument 403 /HackingChallenge/error403.html

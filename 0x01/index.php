@@ -20,7 +20,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hacking Challenge 0x00</title>
+    <title>Hacking Challenge 0x01</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker|ZCOOL+KuaiLe" rel="stylesheet">
     <link rel="stylesheet" href="../data/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,26 +30,20 @@
     <div id="backCover">.</div>
     <div id="contentContainer">
       <div id="headLine">
-        <h1>Hacking Challenge <span id="chalID">0x00</span></h1>
-        <h2>Einführung</h2>
+        <h1>Hacking Challenge <span id="chalID">0x01</span></h1>
+        <h2>ESS QUE ELL EI</h2>
       </div>
       <div class="article">
         <h3>Einleitung & Aufgabenstellung</h3>
-        Das hier ist die erste Hacking Challenge für die <a href="https://informatikag.de" target="_blank">Informatik-AG</a>. Auf dieser Seite ist absichtlich eine Sicherheitslücke eingebaut, die es euch ermöglicht die Aufgabe zu erfüllen. Euer Ziel ist es, dafür zu sorgen, dass jeder Benutzer, der diese Seite aufruft eine
-        <a href="https://www.w3schools.com/jsref/met_win_alert.asp" target="_blank">Alert-Box</a> mit dem Inhalt "XSS on this page!" anzeigt. Am besten benutzt ihr FireFox, der ist am besten geeignet, um diese Art von Angriff durchzuführen. Die einzige Aktion des Benutzers darf maximal nur ein Klick sein. Es gelten die normalen Regeln des Anstandes. Bitte geht nicht böswillig an diese Aufgabe heran. Achso. Es kann auch durchaus sein, dass ich hier irgendwo ein paar Tipps eingebaut habe :P
+        Das hier ist die zweite Hacking Challenge für die <a href="https://informatikag.de" target="_blank">Informatik-AG</a>. Auf dieser Seite ist absichtlich eine Sicherheitslücke eingebaut, die es euch ermöglicht die Aufgabe zu erfüllen.
+        Euer Ziel ist es, euch als Administrator anzumelden. Woran erkennt ihr, ob ihr es geschaft habt? Achso. Mein Fehler. Ihr bekommt eine "Flag", die sieht folgendermaßen aus: CTF{37042415-d282-4f84-83c2-5e28a8ebf7c8}<br />
+        Ein kleiner Hinweis noch: Der Benutzername ist <strong>admin</strong>.<br />
+        Es gelten die normalen Regeln des Anstandes. Bitte geht nicht böswillig an diese Aufgabe heran. Achso. Es kann auch durchaus sein, dass ich hier irgendwo ein paar Tipps eingebaut habe :P
       </div>
       <div class="article">
         <h3>Technische Einleitung / Background</h3>
-        Wie funktioniert so eine Alert-Box?  - Ganz einfach. Eine solche Box wird mit <a href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a> erzeugt. Der Syntax dafür
-        lautet folgendermaßen:
-        <code>
-          alert("Guten Tag");
-        </code>
-        <button onclick='alert("Guten Tag");' class="try">Ausprobieren</button>
-        Der <a href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">Knopf</a> benutzt folgenden <a target="_blank" href="https://www.w3schools.com/html/">HTML-Syntax</a>:
-        <code>
-          &lt;<a href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">button</a> <a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_blank">onclick</a>='<a href="https://www.w3schools.com/jsref/met_win_alert.asp" target="_blank">alert(&quot;Guten Tag&quot;);</a>'&gt;Ausprobieren&lt;/button&gt;
-        </code>
+        Um euch den Spaß am rätseln (und finden des Hinweises, der hier versteckt ist) nicht zu nehmen, findet ihr den <a href="hint.php" target="_blank">Technischen Hintergrund hier</a>.
+        Versucht doch erstmal so etwas herauszufinden. Sucht doch zunächst mal nach Worten, die nicht unbedingt deutsch klingen. Achso. Latein sind sie auch nicht :P
       </div>
       <div class="article" id="comments">
         <h3>Kommentare</h3>
@@ -61,13 +55,13 @@
             echo '
             <div class="comment">
               <div class="commentHeader">
-                '.$value['headLine'].'
+                '.htmlspecialchars($value['headLine']).'
               </div>
               <div class="commentName">
-                von '.$value['name'].'
+                von '.htmlspecialchars($value['name']).'
               </div>
               <div class="commentText">
-                '.$value['text'].'
+                '.htmlspecialchars($value['text']).'
               </div>
             </div>
             ';
@@ -107,9 +101,33 @@
           <input type="password" name="us-pw" /><br />
           <input type="submit" name="adminSubmit" value="Login" />
         </form>
-        <?php if (isset($_POST['adminSubmit'])): ?>
-          Wrong username or password!
-        <?php endif; ?>
+        <?php
+          if (isset($_POST['adminSubmit'])){
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            try {
+                $conn = new PDO("mysql:host=$servername;dbname=hackingchallenge", $username, $password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $quarry = "SELECT * FROM users WHERE username=\"".$_POST['us-name']."\" AND password=\"".$_POST['us-pw']."\"";
+                $quarry = str_replace(";", "YOU ARE NOT ALLOWED TO USE AN <strong>;</strong>   ", $quarry);
+                $quarry .= ";";
+                $stmt = $conn->prepare($quarry);
+                $stmt->execute();
+                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                $response = $stmt->fetchAll();
+                if(count($response)>0){
+                  echo "CTF{77354ba7-0567-478f-9086-8dd3307c5be7}";
+                }else{
+                  echo "CTF{Du-dachtest-so-einfach}";
+                }
+                $conn = null;
+            }catch(PDOException $e){
+                echo "Connection failed: " . str_replace("SQL", "<strong><u><i>SQL</i></u></strong>", $e->getMessage());
+            }
+          }
+        ?>
+
       </div>
     </div>
     <div id="footer">

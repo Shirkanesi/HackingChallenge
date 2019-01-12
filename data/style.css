@@ -16,14 +16,15 @@
   left: 0;
   right: 0;
   z-index: -1;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 #contentContainer{
+  margin-top: -2em;
   width: 50vw;
   transform: translateX(-50%);
   margin-left: 50vw;
-  background-color: rgba(200, 200, 200, 0.6);
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
 #footer{
@@ -37,7 +38,7 @@
 }
 
 #headLine{
-  font-size: 3em;
+  /*font-size: 3em;*/
   text-decoration: underline;
   font-family: 'permanent marker';
   position: sticky;
@@ -46,9 +47,24 @@
   text-align: center;
 }
 
+#chalID{
+  font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+#headLine h1{
+  font-size: 3em !important;
+  display: block;
+}
+
+#headLine h2{
+  font-size: 2em !important;
+  display: block;
+  margin-top: -1em;
+}
+
 .article{
   font-family: 'Oswald';
-  background-color: rgba(150, 150, 150, 0.6);
+  background-color: rgba(150, 150, 150, 0.8);
   margin-bottom: 2em;
   padding-left: 1em;
   padding-right: 1em;
@@ -93,10 +109,15 @@ code{
   display: block;
 }
 
-input[type=text], textarea{
+input[type=text], input[type=password], textarea{
   width: 100%;
 }
 
 textarea{
   height: 4em;
+}
+
+.var{
+  color: purple;
+  font-family: monospace;
 }
