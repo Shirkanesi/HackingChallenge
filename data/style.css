@@ -142,8 +142,14 @@ textarea{
   position: fixed;
   top: 0;
   right: 0;
-  width: 5vw;
-  background-color: pink;
+  min-width: 5vw;
+  background-color: #4e4;
+  border-radius: 2vw;
+  margin: 0.2vw;
   padding: 1em;
   /*height: 3em;*/
+}
+
+.indent{
+  padding-left: 5em;
 }

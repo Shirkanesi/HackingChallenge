@@ -13,6 +13,7 @@
     $toAdd['name'] = bin2hex($_POST['reg-username']);
     $toAdd['password'] = password_hash($_POST['reg-password'], PASSWORD_DEFAULT);
     $toAdd['score'] = 0;
+    $toAdd['rank'] = 5;
     $toAdd['solves'] = array();
     $dataFile[count($dataFile)] = $toAdd;
     jsonWrite("data/sec/userdata.json", $dataFile);
@@ -27,6 +28,7 @@
         if(password_verify($_POST['login-password'], $value['password'])){
           $_SESSION['ACCESS'] = "granted";
           $_SESSION['USER-ID'] = $key;
+          $_SESSION['RANK'] = $value['rank'];
           $_SESSION['USER-NAME'] = $_POST['login-username'];
           header("Location: index.php");
           echo "SUCCESS!";

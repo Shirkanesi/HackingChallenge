@@ -83,8 +83,8 @@
         <form action="" method="post">
           <label for="commentHeadLine">Überschrift:</label><br />
           <input type="text" name="commentHeadLine" value="<?php if(isset($_POST['commentHeadLine'])) echo $_POST['commentHeadLine'];  ?>" /><br />
-          <label for="name">Dein Name:</label><br />
-          <input type="text" name="name" value="<?php if(isset($_POST['name'])) echo $_POST['name'];  ?>"/><br />
+          <label for="name" class="inv">Dein Name:</label>
+          <input type="text" class="inv" name="name" value="<?php echo $_SESSION['USER-NAME'];  ?>"/>
           <label for="commentText">Kommentar:</label><br />
           <textarea name="commentText" value="<?php if(isset($_POST['commentText'])) echo $_POST['commentText'];  ?>"></textarea><br />
           <input type="submit" value="Kommentieren" />
