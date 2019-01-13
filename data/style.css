@@ -47,7 +47,7 @@
   text-align: center;
 }
 
-#chalID{
+#chalID, .chalID{
   font-family: 'ZCOOL KuaiLe', cursive;
 }
 
@@ -120,4 +120,30 @@ textarea{
 .var{
   color: purple;
   font-family: monospace;
+}
+
+.toChallenge{
+  background-color: #88ee44;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.abgabe{
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.inv{
+  display: none;
+}
+
+
+#logout{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5vw;
+  background-color: pink;
+  padding: 1em;
+  /*height: 3em;*/
 }

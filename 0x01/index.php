@@ -1,4 +1,7 @@
 <?php
+  include '../data/sec/php/loginCheck.php';
+ ?>
+<?php
   include '../data/sec/php/jsonStuff.php';
 
   if(isset($_POST['commentText']) && isset($_POST['name']) && isset($_POST['commentHeadLine'])){
