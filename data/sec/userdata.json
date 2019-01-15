@@ -2,10 +2,22 @@
     {
         "name": "536869726b616e657369",
         "password": "$2y$10$SqF5WCR0g.DziMupKfKs6OW5.40mQGGO8CNwD6VVIJbiVQXGfTgbS",
-        "score": 0,
+        "score": 75,
         "rank": 0,
         "solves": {
-
+            "0x00": "solved"
+        }
+    },
+    {
+        "name": "4861636b69",
+        "password": "$2y$10$Bj3V.8hVP9DJvO4xHssceeMywY3tfZsFwp7nj3YVSjQxMEQuB9LZ2",
+        "score": 300,
+        "rank": 5,
+        "solves": {
+            "0x00": "solved",
+            "0x01": "solved",
+            "0x02": "solved",
+            "0x02-b": "solved"
         }
     }
 ]

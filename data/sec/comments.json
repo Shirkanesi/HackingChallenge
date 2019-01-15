@@ -8,5 +8,15 @@
         "headLine": "Ein paar Infos",
         "name": "Der Admin",
         "text": "\u00dcberall dieselbe alte Leier. Das Layout ist fertig, der Text l\u00e4sst auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines gro\u00dfen Bruders \u00bbLorem Ipsum\u00ab, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die G\u00fcte haben, mich ein paar weitere S\u00e4tze lang zu begleiten, m\u00f6chte ich diese Gelegenheit nutzen, Ihnen nicht nur als L\u00fcckenf\u00fcller zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards n\u00e4mlich. Sehen Sie, Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln f\u00fcr HTML, CSS, <strong>JavaScript</strong> oder auch <strong><u><i>XSS </i></u></strong>; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler geh\u00f6rt haben. Diese Standards sorgen daf\u00fcr, dass alle Beteiligten aus einer Webseite den gr\u00f6\u00dften Nutzen ziehen. Im Gegensatz zu fr\u00fcheren Webseiten m\u00fcssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten f\u00fcr den Internet Explorer und einen anderen Browser programmieren. Es reicht eine Seite, die - richtig angelegt - sowohl auf verschiedenen Browsern im Netz funktioniert, aber ebenso gut f\u00fcr den Ausdruck oder die Darstellung auf einem Handy geeignet ist. Wohlgemerkt: Eine Seite f\u00fcr alle Formate. Was f\u00fcr eine Erleichterung. Standards sparen Zeit bei den Entwicklungskosten und sorgen daf\u00fcr, dass sich Webseiten sp\u00e4ter leichter pflegen lassen. Nat\u00fcrlich nur dann, wenn sich alle an diese Standards halten. Das gilt f\u00fcr Browser wie Firefox, Opera, Safari und den Internet Explorer ebenso wie f\u00fcr die Darstellung in Handys. Und was k\u00f6nnen Sie f\u00fcr Standards tun? Fordern Sie von Ihren Designern und Programmieren einfach standardkonforme Webseiten. Ihr Budget wird es Ihnen auf Dauer danken. Ebenso m\u00f6chte ich Ihnen daf\u00fcr danken, dass Sie mich bin zum Ende gelesen haben. Meine Mission ist erf\u00fcllt. Ich werde hier noch die Stellung halten, bis der geplante Text eintrifft. Ich w\u00fcnsche Ihnen noch einen sch\u00f6nen Tag. Und arbeiten Sie nicht zuviel!\u00dcberall dieselbe alte Leier. Das Layout ist fertig, der Text l\u00e4sst auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines gro\u00dfen Bruders \u00bbLorem Ipsum\u00ab, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun"
+    },
+    {
+        "headLine": "XSS on this page!",
+        "name": "Hacki",
+        "text": "Was geht?"
+    },
+    {
+        "headLine": "\u00dcberschrift",
+        "name": "Hacki",
+        "text": "<button onclick='alert(\"XSS on this page!\");' class=\"try\">Ausprobieren</button>"
     }
 ]

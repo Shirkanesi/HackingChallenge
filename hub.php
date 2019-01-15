@@ -64,7 +64,7 @@
       </div>
       <div class="article">
         <h3>Hallo <?php echo $_SESSION['USER-NAME']; ?>,</h3>
-        Wie geht es dir? <br />Auf dieser Seite kannst du alle verfügberen Aufgaben sehen und auch die Lösungen (Flags) abgeben.
+        Wie geht es dir? <br />Auf dieser Seite kannst du alle verfügbaren Aufgaben sehen und auch die Lösungen (Flags) abgeben.
         Die Punkteangaben beziehen sich immer auf die Hauptaufgabe. Es kann durchaus sein, dass es auch noch weniger Pukte für eine andere Eingabe geben kann.
         Also: Immer schön aufmerksam sein und schauen, ob man auch noch andere spannende Informationen finden kann. Viel Spaß
         <h3>Dein momentaner Punktestand beträgt: <u><?php echo $score; ?> Punkte</u></h3>

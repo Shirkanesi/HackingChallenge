@@ -1,4 +1,4 @@
-
+@media (max-width: 1340px) {
   #background{
     position: fixed;
     top: 0;
@@ -22,7 +22,7 @@
 
   #contentContainer{
     margin-top: -2em;
-    width: 50vw;
+    width: 80vw;
     transform: translateX(-50%);
     margin-left: 50vw;
     background-color: rgba(200, 200, 200, 0.5);
@@ -154,3 +154,5 @@
   .indent{
     padding-left: 5em;
   }
+
+}
