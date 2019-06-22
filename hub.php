@@ -89,6 +89,14 @@
           <input type="submit" value="Abgeben" />
         </form>
       </div>
+      <div class="article" hidden>
+        <h3><span class="chalID">0x03</span>:   (+100 Punkte)</h3>
+        <a href="0x03/" class="toChallenge" target="_blank">Zur Challenge</a>
+        <form class="abgabe" method="post" action="">
+          <input type="text" name="0x03-input" placeholder="Admin-Passwort"/>
+          <input type="submit" value="Abgeben" />
+        </form>
+      </div>
       <div class="article">
         <h3>Einleitung & Aufgabenstellung</h3>
         Das hier ist die erste Hacking Challenge für die <a href="https://informatikag.de" target="_blank">Informatik-AG</a>. Auf dieser Seite ist absichtlich eine Sicherheitslücke eingebaut, die es euch ermöglicht die Aufgabe zu erfüllen. Euer Ziel ist es, dafür zu sorgen, dass jeder Benutzer, der diese Seite aufruft eine

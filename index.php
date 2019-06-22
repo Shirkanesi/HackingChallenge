@@ -19,11 +19,12 @@
     jsonWrite("data/sec/userdata.json", $dataFile);
   }
 
+
   if(isset($_POST['login-submit'])){
     $dataFile = jsonRead("data/sec/userdata.json");
     foreach ($dataFile as $key => $value) {
       //var_dump((string)$value['name'], bin2hex($_POST['login-username']));
-      if((string)$value['name'] === bin2hex($_POST['login-username'])){
+      if((string)$value['name'] === (string)bin2hex($_POST['login-username'])){
         echo "Name found";
         if(password_verify($_POST['login-password'], $value['password'])){
           $_SESSION['ACCESS'] = "granted";
